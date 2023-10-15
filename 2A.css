@@ -1,0 +1,21 @@
+h1{
+    border-style: hidden black;
+    margin: 15px;
+    background-origin: padding-box;
+    background-color: antiquewhite;
+    text-align: center;
+}
+.image1{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 2px;
+    float: left;
+    width: auto;
+    height: auto;
+}
+.desc{
+    padding: 5px;
+    margin: 2px;
+    align-self: baseline;
+    color: grey;
+}

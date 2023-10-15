@@ -1,0 +1,90 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color:grey;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+a:hover
+{
+    background-color: black;
+    color: white;
+    display: block ;
+    border-style:groove;
+    padding: auto ;
+    
+}
+nav.shift ul li a:hover {
+    color: #91640F;
+  }
+.logo {
+    font-size: 24px;
+}
+.logo:hover{
+    background-color: black;
+    color: white;
+    display: block ;
+    border-style:groove;
+    padding: auto ;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Add more styles for different sections as needed */
+
+/* Define your responsive styles */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+p{
+    font-size: large;
+    color: blue;
+    font-style: normal;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 30px;
+}

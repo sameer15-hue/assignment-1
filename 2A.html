@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect with JavaScript</title>
+    <link rel="stylesheet" href="D:\html sem\assignment 1\2A.css">
+    <style>
+        /* Style for the container */
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            margin: 20px;
+            float: left;
+            border: 2px solid #ccc; /* Add a border */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+        }
+
+        /* Style for the main image */
+        .main-image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* Style for the overlay image */
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.3s ease;
+        }
+
+        /* Style for captions */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            transition: bottom 0.3s ease;
+        }
+
+        /* Applied when the container is hovered */
+        .hovered .main-image {
+            transform: translateX(-100%);
+        }
+
+        .hovered .overlay-image {
+            left: 0;
+        }
+
+        .hovered .caption {
+            bottom: -30px; /* Move caption up on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+        <img class="main-image" src="D:\html sem\assignment 1\VCE-Hyderabad.webp" alt="Image 1">
+        <img class="overlay-image" src="D:\html sem\assignment 1\wallpaper1.jpg" alt="Overlay 1">
+        <div class="caption">Description for Image 1</div>
+    </div>
+
+    <div class="image-container" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+        <img class="main-image" src="D:\html sem\assignment 1\wallpaper2.jpg" alt="Image 2">
+        <img class="overlay-image" src="D:\html sem\assignment 1\wallparer3.jpg" alt="Overlay 2">
+        <div class="caption">Description for Image 2</div>
+    </div>
+
+    <div class="image-container" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+        <img class="main-image" src="D:\html sem\assignment 1\wallpaper1.jpg" alt="Image 3">
+        <img class="overlay-image" src="D:\html sem\assignment 1\meeting icon.png" alt="Overlay 3">
+        <div class="caption">Description for Image 3</div>
+    </div>
+
+    <script>
+        function onMouseOver(container) {
+            container.querySelector(".main-image").style.transform = "translateX(-100%)";
+            container.querySelector(".overlay-image").style.left = "0";
+            container.classList.add("hovered");
+        }
+
+        function onMouseOut(container) {
+            container.querySelector(".main-image").style.transform = "translateX(0)";
+            container.querySelector(".overlay-image").style.left = "100%";
+            container.classList.remove("hovered");
+        }
+    </script>
+</body>
+</html>
